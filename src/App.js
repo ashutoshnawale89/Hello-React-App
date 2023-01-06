@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import logo from './logo.svg'
 
 class App extends React.Component {
 
@@ -13,7 +14,8 @@ class App extends React.Component {
   return (
     <div className="App">
       <h2>{this.state.title}</h2>
-    </div>
+      <img src={logo} />
+      </div>
   );
 }
 }
