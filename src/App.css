@@ -7,6 +7,12 @@ img{
   height:200px
 }
 
+.error_output{
+  margin-left: 10px;
+  font-size: 12px;
+  font-style: italic;
+  color: red;
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
