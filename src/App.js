@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import logo from './logo.svg'
+import Bridgelabz from './components/Bridgelabz'
 
 class App extends React.Component {
   url = "https://www.google.com/"
@@ -13,9 +14,9 @@ class App extends React.Component {
   }
 
   //onClick Function
-  OnClick = ($event) => {
-    console.log("save button is clicked!", $event);
-    window.open(this.url, "_blank");
+  onClicks = ($event) => {
+    console.log('save button is clicked!', $event);
+    window.open(this.url, '_blank');
   }
 
   onNameChange = (event) => {
@@ -33,18 +34,29 @@ class App extends React.Component {
 
   render(){
   return (
-    <div className="App">
     <div>
-      <h2>Hello {this.state.userName} from Bridgelabz</h2>
-      <img src={logo} OnClick={this.OnClick}  
-        alt='The Bridgelabz logo: a Bridge to Employement through lab Works'/>
-    </div>
-    <div>
-    <input onChange={this.onNameChange} />
-    <span className='error_output'>{this.state.nameError}</span>
-    </div>
-    </div>
-  );
+      <header>Header</header>
+      <div id="main">
+        <article>
+          <div className="App">
+            <div>
+              <h2>Hello {this.state.userName} from Bridgelabz</h2>
+              <img src={logo} onClick={this.onClicks} alt='The Bridgelabz logo: a Bridge to Employement through lab Works'/>
+            </div>
+            <div>
+              <input onChange={this.onNameChange} />
+              <span className='error_output'>{this.state.nameError}</span>
+              <br></br>
+            </div>
+          </div>
+          <Bridgelabz></Bridgelabz>
+        </article>
+        <nav>Nav</nav>
+        <aside>Aside</aside>
+      </div>
+      <footer>Footer</footer>
+    </div>);
 }
 }
+
 export default App;
