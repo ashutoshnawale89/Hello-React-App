@@ -2,6 +2,9 @@ import React from 'react';
 import './App.css';
 import logo from './logo.svg'
 import Bridgelabz from './components/Bridgelabz'
+import Home from './components/Home';
+import About from './components/About';
+import { Route, Routes, Link } from "react-router-dom"
 
 class App extends React.Component {
   url = "https://www.google.com/"
@@ -35,7 +38,12 @@ class App extends React.Component {
   render(){
   return (
     <div>
-      <header>Header</header>
+      <Routes>
+          <Route path='/home' element={<Home/>}/>
+          <Route path='/about' element={<About/>}/>
+          <Route path='/section' element={<Bridgelabz/>}/>
+      </Routes>
+      <header></header>
       <div id="main">
         <article>
           <div className="App">
@@ -51,10 +59,10 @@ class App extends React.Component {
           </div>
           <Bridgelabz></Bridgelabz>
         </article>
-        <nav>Nav</nav>
-        <aside>Aside</aside>
+        <nav></nav>
+        <aside></aside>
       </div>
-      <footer>Footer</footer>
+      <footer></footer>
     </div>);
 }
 }

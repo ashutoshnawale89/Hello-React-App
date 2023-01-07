@@ -35,6 +35,10 @@ img{
 #main > nav {
   order: -1;
 }
+header{
+  padding-bottom: 100em;
+  text-align:center;
+}
 header, footer {
   background: yellowgreen;
   height: 8vh;
